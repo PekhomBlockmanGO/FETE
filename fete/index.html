@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Quiz</title>
+</head>
+
+<body>
+    <video class="video-background" autoplay muted loop>
+        <source src="your-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <h1 class="heading">Quiz</h1>
+        <form id="quiz-form">
+            <div id="question-container" class="question-container"></div>
+            <div id="options-container" class="options-container"></div>
+            <button type="button" id="submit-button" onclick="checkAnswer()">
+                <i class="fas fa-check"></i> Submit
+            </button>
+
+            <!-- Add the image below the submit button -->
+            <img src="image.png" alt="Transparent Image" class="transparent-image">
+
+            <div id="result-container" class="result-container"></div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
