@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Quiz Start Page</title>
+</head>
+
+<body>
+    <div class="start-container">
+       
+        <video class="video-background" autoplay muted loop>
+            <source src="start-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+
+        <h1 class="start-heading">Welcome to the Quiz</h1>
+        <button id="start-button">Start Quiz</button>
+    </div>
+    
+
+    <div class="quiz-container" style="display:none;">
+        <video class="video-background" autoplay muted loop>
+            <source src="your-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br>
+        <br>
+        <br>
+        <br><br>
+        <br>
+        <br>
+        <br><br>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <h1 class="heading">Quiz</h1>
+            <form id="quiz-form">
+                <div id="question-container" class="question-container"></div>
+                <div id="options-container" class="options-container"></div>
+                
+                <button type="button" id="submit-button" onclick="checkAnswer()">
+                    <i class="fas fa-check"></i> Submit
+                </button>
+                <div id="result-container" class="result-container"></div>
+                <div class="logo-timer-container">
+                    <div class="logo-container">
+                        <img src="logo.png" alt="Logo" class="logo">
+                    </div>
+                    <div id="timer-container" class="timer-container">Time left: <span id="timer">10</span> seconds</div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("start-button").addEventListener("click", startQuiz);
+
+        function startQuiz() {
+            document.querySelector('.start-container').style.display = 'none';
+            document.querySelector('.quiz-container').style.display = 'block';
+            initializeQuiz();
+            startTimer(); 
+        }
+    </script>
+</body>
+
+</html>
